@@ -13,11 +13,11 @@ import LoginPage from "./pages/Login";
 import NotFoundPage from "./pages/NotFound";
 import PersonalPage from "./pages/Personal";
 import TotalPage from "./pages/Total";
-import AuthPage from "./components/AuthPage";
+import AuthPage from "./pages/Auth";
 
 const AppRoutes = () => {
   // const { isAuthenticated } = useAuthStore();
-  const isAuthenticated = true;
+  // const isAuthenticated = true;
 
   return (
     <Router>
@@ -25,7 +25,8 @@ const AppRoutes = () => {
         <Route errorElement={<ErrorPage />}>
           <Route
             path="/"
-            element={isAuthenticated ? <Navigate to="/total" /> : <LoginPage />}
+            // element={isAuthenticated ? <Navigate to="/total" /> :
+            element={<LoginPage />}
           />
           {/* authGuard필요함 */}
           <Route path="/auth" element={<AuthPage />} />
