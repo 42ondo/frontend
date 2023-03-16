@@ -1,3 +1,5 @@
+import { QueryClientProvider } from "react-query";
+import { queryClient } from "./constants/queryClient";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Global } from "@emotion/react";
 import { reset } from "./styles/reset";
@@ -6,10 +8,12 @@ import AppRoutes from "./AppRoutes";
 
 function App() {
   return (
-    <ChakraProvider>
-      <Global styles={[reset, global]} />
-      <AppRoutes />
-    </ChakraProvider>
+    <QueryClientProvider client={queryClient}>
+      <ChakraProvider>
+        <Global styles={[reset, global]} />
+        <AppRoutes />
+      </ChakraProvider>
+    </QueryClientProvider>
   );
 }
 
