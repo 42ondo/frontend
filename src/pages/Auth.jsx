@@ -1,22 +1,20 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import axios from "axios";
+import useApi from "../hooks/useApi";
+
 const Auth = () => {
   const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
   const code = searchParams.get("code");
-  useEffect(() => {
-    axios
-      .get(`${process.env.REACT_APP_API}/auth/me`, {
-        params: { code: code },
-        withCredentials: true,
-      })
-      .then(() => {
-        navigate("/total");
-      });
-  }, []);
+  const { useGet } = useApi();
+  const navigate = useNavigate();
 
-  return <div>Auth</div>;
+  const { status } = useGet("me", "auth/me", code, {
+    onSuccess: () => {
+      navigate("/total");
+    },
+  });
+
+  return <div>{status}</div>;
 };
 
 export default Auth;
