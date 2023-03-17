@@ -1,5 +1,11 @@
+import PersonalBoard from "../components/personalBoard/PersonalBoard";
+
 function PersonalPage() {
-    return <>personal</>;
+  return (
+    <>
+      <PersonalBoard />
+    </>
+  );
 }
 
 export default PersonalPage;
