@@ -1,7 +1,7 @@
 import useAxios from "./useAxios";
 import { useQuery } from "react-query";
 
-const useApi = () => {
+export const useApi = () => {
   const { get } = useAxios();
 
   /*
@@ -16,5 +16,3 @@ const useApi = () => {
 
   return { useGet };
 };
-
-export default useApi;

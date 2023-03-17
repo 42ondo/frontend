@@ -1,11 +1,15 @@
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import { useApi } from "../hooks/useApi";
 function TotalPage() {
   const { useGet } = useApi();
 
-  const testCall = () => useGet("example/test");
-  const logout = () => useGet("auth/logout");
+  const testCall = () => {
+    useGet("test", "example/test");
+  };
+  const logout = () => {
+    useGet("logout", "auth/logout");
+  };
 
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
