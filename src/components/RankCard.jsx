@@ -1,13 +1,4 @@
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  Divider,
-  VStack,
-  Text,
-  Flex,
-  Box,
-} from "@chakra-ui/react";
+import { Card, CardBody, VStack, Text, Box } from "@chakra-ui/react";
 import UserItem from "./UserItem";
 function RankCard() {
   const users = [
@@ -46,6 +37,34 @@ function RankCard() {
         "https://static.wikia.nocookie.net/pokemon/images/5/52/피카츄_공식_일러스트.png/revision/latest/scale-to-width-down/200?cb=20170405000019&path-prefix=ko",
       ondo: 42,
     },
+    {
+      id: 1238,
+      name: "tmp",
+      imgUrl:
+        "https://static.wikia.nocookie.net/pokemon/images/5/52/피카츄_공식_일러스트.png/revision/latest/scale-to-width-down/200?cb=20170405000019&path-prefix=ko",
+      ondo: 42,
+    },
+    {
+      id: 1238,
+      name: "tmp",
+      imgUrl:
+        "https://static.wikia.nocookie.net/pokemon/images/5/52/피카츄_공식_일러스트.png/revision/latest/scale-to-width-down/200?cb=20170405000019&path-prefix=ko",
+      ondo: 42,
+    },
+    {
+      id: 1238,
+      name: "tmp",
+      imgUrl:
+        "https://static.wikia.nocookie.net/pokemon/images/5/52/피카츄_공식_일러스트.png/revision/latest/scale-to-width-down/200?cb=20170405000019&path-prefix=ko",
+      ondo: 42,
+    },
+    {
+      id: 1238,
+      name: "tmp",
+      imgUrl:
+        "https://static.wikia.nocookie.net/pokemon/images/5/52/피카츄_공식_일러스트.png/revision/latest/scale-to-width-down/200?cb=20170405000019&path-prefix=ko",
+      ondo: 42,
+    },
   ];
   const unit = "도";
   return (
@@ -59,11 +78,11 @@ function RankCard() {
           </Card>
           <Card w="100%">
             <CardBody>
-              <VStack mt="1" spacing="3">
+              <Box>
                 {users.map((x, i) => (
                   <UserItem idx={i} user={x} cnt={x.ondo} unit={unit} />
                 ))}
-              </VStack>
+              </Box>
             </CardBody>
           </Card>
         </VStack>
