@@ -5,6 +5,7 @@ import { Global } from "@emotion/react";
 import { reset } from "./styles/reset";
 import { global } from "./styles/global";
 import AppRoutes from "./AppRoutes";
+import "./App.css";
 
 function App() {
   return (

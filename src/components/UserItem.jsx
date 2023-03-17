@@ -1,11 +1,13 @@
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, HStack, Text } from "@chakra-ui/react";
 
 function UserItem({ user, idx, cnt, unit }) {
   return (
     <Box mt={"5%"} mb={"5%"}>
       <HStack justifyContent="space-between">
         <Box>
-          {idx + 1}위 {user.name} {cnt} {unit}
+          <Text fontFamily={"Nanum"} fontWeight={"normal"}>
+            {idx + 1}위 {user.name} {cnt} {unit}
+          </Text>
         </Box>
 
         <Box

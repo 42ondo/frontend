@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Naum";
+  src: url("./styles/fonts/NanumGothic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nanum";
+  src: url("./styles/fonts/NanumGothicBold.ttf") format("truetype");
+  font-weight: 200;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Nanum";
+  src: url("./styles/fonts/NanumGothicExtraBold.ttf") format("truetype");
+  font-weight: 400;
+  font-style: extraBold;
+}
+
+@font-face {
+  font-family: "Nanum";
+  src: url("./styles/fonts/NanumGothicLight.ttf") format("truetype");
+  font-weight: 100;
+  font-style: lighter;
+}

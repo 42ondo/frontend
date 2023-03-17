@@ -44,27 +44,6 @@ function RankCard() {
         "https://static.wikia.nocookie.net/pokemon/images/5/52/피카츄_공식_일러스트.png/revision/latest/scale-to-width-down/200?cb=20170405000019&path-prefix=ko",
       ondo: 42,
     },
-    {
-      id: 1238,
-      name: "tmp",
-      imgUrl:
-        "https://static.wikia.nocookie.net/pokemon/images/5/52/피카츄_공식_일러스트.png/revision/latest/scale-to-width-down/200?cb=20170405000019&path-prefix=ko",
-      ondo: 42,
-    },
-    {
-      id: 1238,
-      name: "tmp",
-      imgUrl:
-        "https://static.wikia.nocookie.net/pokemon/images/5/52/피카츄_공식_일러스트.png/revision/latest/scale-to-width-down/200?cb=20170405000019&path-prefix=ko",
-      ondo: 42,
-    },
-    {
-      id: 1238,
-      name: "tmp",
-      imgUrl:
-        "https://static.wikia.nocookie.net/pokemon/images/5/52/피카츄_공식_일러스트.png/revision/latest/scale-to-width-down/200?cb=20170405000019&path-prefix=ko",
-      ondo: 42,
-    },
   ];
   const unit = "도";
   return (
@@ -73,7 +52,14 @@ function RankCard() {
         <VStack spacing={5}>
           <Card w="80%">
             <CardBody>
-              <Text align="center">Rank Card Title</Text>
+              <Text
+                align="center"
+                fontFamily={"Nanum"}
+                fontWeight={"extrabold"}
+                fontSize={"20px"}
+              >
+                Rank Card Title
+              </Text>
             </CardBody>
           </Card>
           <Card w="100%">
