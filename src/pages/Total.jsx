@@ -2,17 +2,11 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 function TotalPage() {
-  const testCall = () => {
-    axios.get(process.env.REACT_APP_API + "/example/test", {
-      withCredentials: true,
-    });
-  };
+  const { useGet } = useApi();
 
-  const logout = () => {
-    axios.get(process.env.REACT_APP_API + "/auth/logout", {
-      withCredentials: true,
-    });
-  };
+  const testCall = () => useGet("example/test");
+  const logout = () => useGet("auth/logout");
+
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       <button onClick={testCall}>test</button>
