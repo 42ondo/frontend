@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import PersonalTitle from "./PersonalTitle";
 import Temperature from "./Temperature";
+import Statistics from "./Statistics";
 
 const PersonalBoardWrapper = styled.div`
   width: 1000px;
@@ -20,6 +21,7 @@ const PersonalBoard = () => {
     <PersonalBoardWrapper>
       <PersonalTitle />
       <Temperature />
+      <Statistics />
     </PersonalBoardWrapper>
   );
 };
