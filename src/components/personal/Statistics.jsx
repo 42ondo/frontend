@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
 import React from "react";
-import StatisticsAverage from "./StatisticsAverage";
-import StatisticsPersonal from "./StatisticsPersonal";
+import styled from "@emotion/styled";
+import StatisticsAverage from "components/personal/StatisticsAverage";
+import StatisticsPersonal from "components/personal/StatisticsPersonal";
 
 const Flex = styled.div`
   display: flex;

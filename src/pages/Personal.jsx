@@ -1,9 +1,9 @@
-import PersonalBoard from "../components/personalBoard/PersonalBoard";
-import { Box, Flex, HStack } from "@chakra-ui/react";
-import Logo from "../components/Logo";
-import SearchBar from "../components/SearchBar";
+import PersonalBoard from "../components/personal/PersonalBoard";
+import { Flex, HStack } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-import MostUsed from "../components/personal/MostUsed";
+import Logo from "components/Logo";
+import SearchBar from "components/SearchBar";
+import MostUsed from "components/personal/MostUsed";
 
 const LogoLeft = styled(Logo)`
   margin: 30px;

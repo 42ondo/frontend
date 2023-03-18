@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
-import DegreeBubble from "./DegreeBubble";
+import DegreeBubble from "components/DegreeBubble";
 
 const Filled = styled.div`
   width: ${(props) => props.degree * 8}px;

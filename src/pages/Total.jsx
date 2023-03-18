@@ -1,7 +1,7 @@
 import { Flex, HStack } from "@chakra-ui/react";
-import RankCard from "../components/RankCard";
-import SearchBar from "../components/SearchBar";
-import Logo from "../components/Logo";
+import RankCard from "components/RankCard";
+import SearchBar from "components/SearchBar";
+import Logo from "components/Logo";
 
 function TotalPage() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import RankCard from "../../components/RankCard";
-import RankItem from "../../components/RankItem";
-import { useGetWordRankName } from "../../apis/useGetWordRankName";
+import RankCard from "components/RankCard";
+import RankItem from "components/RankItem";
+import { useGetWordRankName } from "apis/useGetWordRankName";
 import styled from "@emotion/styled";
 
 const Wrapper = styled(RankCard)``;

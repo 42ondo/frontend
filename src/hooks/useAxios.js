@@ -1,4 +1,4 @@
-import { axiosInstance } from "../constants/axiosInstance";
+import { axiosInstance } from "constants/axiosInstance";
 
 const useAxios = () => {
   const get = (url, data, config) =>

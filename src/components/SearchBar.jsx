@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
-import { Input, InputGroup, InputRightElement } from "@chakra-ui/react";
-import { SearchIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 import styled from "@emotion/styled";
+import { SearchIcon } from "@chakra-ui/icons";
+import { Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 
 const Form = styled.form`
   width: 70%;

@@ -1,5 +1,5 @@
-import { Box, HStack, Text } from "@chakra-ui/react";
 import styled from "@emotion/styled";
+import { Box, HStack } from "@chakra-ui/react";
 
 const Rank = styled.div`
   display: flex;

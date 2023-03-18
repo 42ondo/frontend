@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
 import React from "react";
-import BubbleImg from "../../assets/images/bubble.svg";
+import styled from "@emotion/styled";
+import BubbleImg from "assets/images/bubble.svg";
 
 const Wrapper = styled.div`
   display: flex;

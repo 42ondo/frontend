@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useApi } from "../hooks/useApi";
+import { useApi } from "hooks/useApi";
 
 export const useGetEvalName = () => {
   const { userName } = useParams();

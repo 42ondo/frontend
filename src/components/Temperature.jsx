@@ -1,9 +1,11 @@
-import styled from "@emotion/styled";
 import React, { Suspense } from "react";
-import { useGetUserName } from "../../apis/useGetUserName";
-import TemperatureBody from "../../assets/images/temperature_body.svg";
-import TemperatureFill from "./TemperatureFill";
-const TemperatureAverage = React.lazy(() => import("./TemperatureAverage"));
+import styled from "@emotion/styled";
+import { useGetUserName } from "apis/useGetUserName";
+import TemperatureBody from "assets/images/temperature_body.svg";
+import TemperatureFill from "components/TemperatureFill";
+const TemperatureAverage = React.lazy(() =>
+  import("./personal/TemperatureAverage")
+);
 
 const Wrapper = styled.div`
   position: relative;

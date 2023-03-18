@@ -1,8 +1,8 @@
-import styled from "@emotion/styled";
 import React from "react";
-import TemperatureFill from "./TemperatureFill";
-import BubbleReverse from "../../assets/images/bubble_reverse_grey.svg";
-import useGetOndoAverage from "../../apis/useGetOndoAverage";
+import styled from "@emotion/styled";
+import useGetOndoAverage from "apis/useGetOndoAverage";
+import TemperatureFill from "components/TemperatureFill";
+import BubbleReverse from "assets/images/bubble_reverse_grey.svg";
 
 const AverageFill = styled(TemperatureFill)`
   & .fill {

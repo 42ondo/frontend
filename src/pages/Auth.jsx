@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { useApi } from "../hooks/useApi";
 import { Flex, Spinner } from "@chakra-ui/react";
+import { useApi } from "hooks/useApi";
 
 const Auth = () => {
   const [searchParams] = useSearchParams();

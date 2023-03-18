@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { useGetUserName } from "../../apis/useGetUserName";
-import { useGetUserTitleName } from "../../apis/useGetUserTitleName";
 import { Box } from "@chakra-ui/react";
+import { useGetUserName } from "apis/useGetUserName";
+import { useGetUserTitleName } from "apis/useGetUserTitleName";
 
 const Header = styled.div`
   display: flex;

@@ -1,5 +1,5 @@
-import { VStack, Text, Box } from "@chakra-ui/react";
 import styled from "@emotion/styled";
+import { VStack, Text, Box } from "@chakra-ui/react";
 
 const Body = styled(Box)`
   width: 380px;

@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ErrorPage from "./pages/Error";
-import LoginPage from "./pages/Login";
-import NotFoundPage from "./pages/NotFound";
-import PersonalPage from "./pages/Personal";
-import TotalPage from "./pages/Total";
-import AuthPage from "./pages/Auth";
+import ErrorPage from "pages/Error";
+import LoginPage from "pages/Login";
+import NotFoundPage from "pages/NotFound";
+import PersonalPage from "pages/Personal";
+import TotalPage from "pages/Total";
+import AuthPage from "pages/Auth";
 
 const AppRoutes = () => {
   return (

@@ -1,8 +1,8 @@
-import { Button } from "@chakra-ui/react";
-import styled from "@emotion/styled";
 import React from "react";
+import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
-import { ReactComponent as LogoImage } from "../assets/images/logo.svg";
+import { Button } from "@chakra-ui/react";
+import { ReactComponent as LogoImage } from "assets/images/logo.svg";
 
 const Container = styled(Button)`
   flex: ${(props) => props.flexOption};

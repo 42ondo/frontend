@@ -1,8 +1,8 @@
 import { Button, Image } from "@chakra-ui/react";
-import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
-import Logo from "../components/Logo";
-import SquaredLogo from "../assets/images/squaredLogo.svg";
+import styled from "@emotion/styled";
+import Logo from "components/Logo";
+import SquaredLogo from "assets/images/squaredLogo.svg";
 
 const BackGround = styled.main`
   width: 100vw;

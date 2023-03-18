@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "@emotion/styled";
-import PersonalTitle from "./PersonalTitle";
-import Temperature from "./Temperature";
-import Statistics from "./Statistics";
-import { useGetUserName } from "../../apis/useGetUserName";
+import { useGetUserName } from "apis/useGetUserName";
+import PersonalTitle from "components/personal/PersonalTitle";
+import Temperature from "components/Temperature";
+import Statistics from "components/personal/Statistics";
 
 const PersonalBoardWrapper = styled.div`
   width: 1000px;

@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { StatisticsText, StatisticsTitle } from "./StatisticsStyle";
-import { timeToString } from "../../utils/timeToString";
-import { useGetEvalName } from "../../apis/useGetEvalName";
-import { convertTimeString } from "../../utils/convertTime";
+import { useGetEvalName } from "apis/useGetEvalName";
+import { timeToString } from "utils/timeToString";
+import { convertTimeString } from "utils/convertTime";
+import { StatisticsText, StatisticsTitle } from "components/personal/StatisticsStyle";
 
 const Wrapper = styled.div`
   width: 500px;
