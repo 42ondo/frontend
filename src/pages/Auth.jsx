@@ -8,11 +8,16 @@ const Auth = () => {
   const { useGet } = useApi();
   const navigate = useNavigate();
 
-  const { status } = useGet("me", "auth/me", code, {
-    onSuccess: () => {
-      navigate("/total");
-    },
-  });
+  const { status } = useGet(
+    "me",
+    "auth/me",
+    { code },
+    {
+      onSuccess: () => {
+        navigate("/total");
+      },
+    }
+  );
 
   return <div>{status}</div>;
 };
