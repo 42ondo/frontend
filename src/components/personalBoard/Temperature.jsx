@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React, { Suspense } from "react";
+import { useGetUserName } from "../../apis/useGetUserName";
 import TemperatureBody from "../../assets/images/temperature_body.svg";
-import { userName } from "../../mockApi/userName";
 import TemperatureFill from "./TemperatureFill";
 const TemperatureAverage = React.lazy(() => import("./TemperatureAverage"));
 
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 const Fill = styled(TemperatureFill)``;
 
 const Temperature = () => {
-  const { ondo: degree } = userName();
+  const { ondo: degree } = useGetUserName();
   return (
     <Wrapper>
       <Fill degree={degree} text="현재" />

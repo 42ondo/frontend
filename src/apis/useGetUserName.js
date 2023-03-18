@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import { useApi } from "../hooks/useApi";
 
@@ -10,5 +9,9 @@ export const useGetUserName = () => {
     onSuccess: (response) => response.data,
   });
 
-  return { login: data?.login };
+  return {
+    id: data?.id,
+    login: data?.login,
+    ondo: data?.ondo,
+  };
 };

@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { ondoAverage } from "../../mockApi/ondoAverage";
 import TemperatureFill from "./TemperatureFill";
 import BubbleReverse from "../../assets/images/bubble_reverse_grey.svg";
+import useGetOndoAverage from "../../apis/useGetOndoAverage";
+
 const AverageFill = styled(TemperatureFill)`
   & .fill {
     background-color: black;
@@ -20,7 +21,8 @@ const AverageFill = styled(TemperatureFill)`
   }
 `;
 const TemperatureAverage = ({ text }) => {
-  const degree = ondoAverage();
+  const { degree } = useGetOndoAverage();
+
   return <AverageFill degree={degree} text={text} />;
 };
 

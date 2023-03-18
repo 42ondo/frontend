@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { evalName } from "../../mockApi/evalName";
 import { StatisticsText, StatisticsTitle } from "./StatisticsStyle";
 import { timeToString } from "../../utils/timeToString";
+import { useGetEvalName } from "../../apis/useGetEvalName";
+import { convertTimeString } from "../../utils/convertTime";
 
 const Wrapper = styled.div`
   width: 500px;
@@ -22,23 +23,23 @@ const Text = styled(StatisticsText)`
 `;
 
 const StatisticsPersonal = () => {
-  const statistics = evalName();
-
+  const { evalCnt, timeSpentAll, timeZoneLike, mostSubject, evalRatio } =
+    useGetEvalName();
   return (
     <Wrapper>
-      <Title>주간 내꺼</Title>
+      <Title>개 인</Title>
       <Text>
-        평가 횟수 {statistics.evalCnt}회 <b>상위 {statistics.evalRatio}%</b>
+        평가 횟수 {evalCnt}회 <b>상위 {(evalRatio * 100).toFixed(2)}%</b>
       </Text>
       <Text>
-        평가에 쏟은 시간 <b>총 {statistics.timeSpentAll}시간</b>
+        평가에 쏟은 시간 <b>총 {convertTimeString(timeSpentAll)}</b>
       </Text>
       <Text>
-        최빈 평가 시간대 <b>{timeToString(statistics.timeZoneLike)}</b>
+        최빈 평가 시간대 <b>{timeToString(timeZoneLike)}</b>
       </Text>
       <Text>
         최다 평가 서브젝트
-        <b> {statistics.mostSubject}</b>
+        <b> {mostSubject}</b>
       </Text>
     </Wrapper>
   );

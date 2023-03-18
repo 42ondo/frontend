@@ -22,9 +22,14 @@ const Bubble = styled(DegreeBubble)`
 const Wrapper = styled.div``;
 
 const TemperatureFill = ({ className, degree, text }) => {
+  const rouned = (number) => {
+    console.log(number, typeof number);
+    if (typeof number === "number") return parseInt(number, 10);
+    return number;
+  };
   return (
     <Wrapper className={className}>
-      <Filled degree={degree} className="fill" />
+      <Filled degree={rouned(degree)} className="fill" />
       <Bubble id="bubble" text={text} degree={degree} className="bubble" />
     </Wrapper>
   );
