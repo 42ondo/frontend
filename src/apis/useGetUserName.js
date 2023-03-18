@@ -2,10 +2,10 @@ import { useParams } from "react-router-dom";
 import { useApi } from "../hooks/useApi";
 
 export const useGetUserName = () => {
-  const { username } = useParams();
+  const { userName } = useParams();
   const { useGet } = useApi();
 
-  const { data } = useGet("userName", `user/${username}`, undefined, {
+  const { data } = useGet("userName", `user/${userName}`, undefined, {
     onSuccess: (response) => response.data,
   });
 
