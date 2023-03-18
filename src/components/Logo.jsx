@@ -1,16 +1,22 @@
+import { Button } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import React from "react";
+import { Link } from "react-router-dom";
 import { ReactComponent as LogoImage } from "../assets/images/logo.svg";
 
-const Container = styled.div`
+const Container = styled(Button)`
   flex: ${(props) => props.flexOption};
   display: flex;
   align-items: center;
+  background-color: transparent;
+  &:hover {
+    background: transparent;
+  }
 `;
 
-const Logo = ({ color, flexOption }) => {
+const Logo = ({ color, flexOption, className, to }) => {
   return (
-    <Container flexOption={flexOption}>
+    <Container as={Link} flex={flexOption} className={className} to={to}>
       <LogoImage color={color} />
     </Container>
   );
