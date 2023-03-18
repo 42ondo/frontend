@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import PersonalTitle from "./PersonalTitle";
 import Temperature from "./Temperature";
 import Statistics from "./Statistics";
+import { useGetUserName } from "../../apis/useGetUserName";
 
 const PersonalBoardWrapper = styled.div`
   width: 1000px;
@@ -16,12 +17,27 @@ const PersonalBoardWrapper = styled.div`
   --color-grey: #bababa;
 `;
 
+const Error = styled.div`
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+`;
 const PersonalBoard = () => {
+  const { login } = useGetUserName();
+
   return (
     <PersonalBoardWrapper>
-      <PersonalTitle />
-      <Temperature />
-      <Statistics />
+      {login ? (
+        <>
+          <PersonalTitle />
+          <Temperature />
+          <Statistics />
+        </>
+      ) : (
+        <Error>평가 정보를 찾을 수 없습니다</Error>
+      )}
     </PersonalBoardWrapper>
   );
 };
