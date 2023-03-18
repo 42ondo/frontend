@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { useGetUserName } from "../../apis/useGetUserName";
+import { useGetUserTitleName } from "../../apis/useGetUserTitleName";
 
 const Header = styled.div`
   display: flex;
@@ -22,12 +23,13 @@ const Header = styled.div`
 `;
 
 const PersonalTitle = () => {
-  const data = useGetUserName();
+  const { login } = useGetUserName();
+  const { title } = useGetUserTitleName();
 
   return (
     <Header>
-      <span>{data?.title}</span>
-      <span>{data?.login?.toUpperCase()}</span>
+      <span>{title}</span>
+      <span>{login?.toUpperCase()}</span>
       <span>의 평가온도는?</span>
     </Header>
   );
