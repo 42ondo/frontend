@@ -1,79 +1,41 @@
-import { Card, CardBody, VStack, Text, Box } from "@chakra-ui/react";
-import UserItem from "./UserItem";
-function RankCard() {
-  const users = [
-    {
-      id: 1234,
-      name: "cmoon",
-      imgUrl:
-        "https://static.wikia.nocookie.net/pokemon/images/5/52/피카츄_공식_일러스트.png/revision/latest/scale-to-width-down/200?cb=20170405000019&path-prefix=ko",
-      ondo: 42,
-    },
-    {
-      id: 1235,
-      name: "dongyshi",
-      imgUrl:
-        "https://static.wikia.nocookie.net/pokemon/images/5/52/피카츄_공식_일러스트.png/revision/latest/scale-to-width-down/200?cb=20170405000019&path-prefix=ko",
-      ondo: 42,
-    },
-    {
-      id: 1236,
-      name: "juahn",
-      imgUrl:
-        "https://static.wikia.nocookie.net/pokemon/images/5/52/피카츄_공식_일러스트.png/revision/latest/scale-to-width-down/200?cb=20170405000019&path-prefix=ko",
-      ondo: 42,
-    },
-    {
-      id: 1237,
-      name: "sujikim",
-      imgUrl:
-        "https://static.wikia.nocookie.net/pokemon/images/5/52/피카츄_공식_일러스트.png/revision/latest/scale-to-width-down/200?cb=20170405000019&path-prefix=ko",
-      ondo: 42,
-    },
-    {
-      id: 1238,
-      name: "tmp",
-      imgUrl:
-        "https://static.wikia.nocookie.net/pokemon/images/5/52/피카츄_공식_일러스트.png/revision/latest/scale-to-width-down/200?cb=20170405000019&path-prefix=ko",
-      ondo: 42,
-    },
-    {
-      id: 1238,
-      name: "tmp",
-      imgUrl:
-        "https://static.wikia.nocookie.net/pokemon/images/5/52/피카츄_공식_일러스트.png/revision/latest/scale-to-width-down/200?cb=20170405000019&path-prefix=ko",
-      ondo: 42,
-    },
-  ];
-  const unit = "도";
+import { VStack, Text, Box } from "@chakra-ui/react";
+import styled from "@emotion/styled";
+
+const Body = styled(Box)`
+  background-color: white;
+  min-width: 360px;
+  padding: 40px 30px 20px;
+  border-radius: 80px;
+  border: solid 15px var(--color-secondary);
+  & > :first-child {
+    color: var(--color-red);
+  }
+`;
+const Header = styled(Box)`
+  width: 80%;
+  height: 100px;
+  background-color: var(--color-primary);
+  border: solid 3px var(--color-secondary);
+  border-radius: 30px;
+
+  font-family: "Bungee";
+  font-size: 36px;
+  display: flex;
+  position: absolute;
+  top: -40px;
+  & > p {
+    margin: auto;
+  }
+`;
+
+function RankCard({ title, children }) {
   return (
-    <>
-      <Box p="5" alignItems="center" w="20%" borderRadius="10" bg="#C476D1">
-        <VStack spacing={5}>
-          <Card w="80%">
-            <CardBody>
-              <Text
-                align="center"
-                fontFamily={"Nanum"}
-                fontWeight={"extrabold"}
-                fontSize={"20px"}
-              >
-                Rank Card Title
-              </Text>
-            </CardBody>
-          </Card>
-          <Card w="100%">
-            <CardBody>
-              <Box>
-                {users.map((x, i) => (
-                  <UserItem idx={i} user={x} cnt={x.ondo} unit={unit} />
-                ))}
-              </Box>
-            </CardBody>
-          </Card>
-        </VStack>
-      </Box>
-    </>
+    <VStack position="relative">
+      <Header>
+        <Text>{title}</Text>
+      </Header>
+      <Body>{children}</Body>
+    </VStack>
   );
 }
 export default RankCard;
