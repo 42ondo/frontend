@@ -7,7 +7,10 @@ import { useGetUserName } from "../../apis/useGetUserName";
 
 const PersonalBoardWrapper = styled.div`
   width: 1000px;
-  height: 800px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: white;
   border: 1px solid black;
   border-radius: 50px;
@@ -21,11 +24,11 @@ const Error = styled.div`
   align-items: center;
   font-size: 20px;
 `;
-const PersonalBoard = () => {
+const PersonalBoard = ({ className }) => {
   const { login } = useGetUserName();
 
   return (
-    <PersonalBoardWrapper>
+    <PersonalBoardWrapper className={`board ${className}`}>
       {login ? (
         <>
           <PersonalTitle />

@@ -2,6 +2,7 @@ import { VStack, Text, Box } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 
 const Body = styled(Box)`
+  width: 380px;
   background-color: white;
   min-width: 360px;
   padding: 40px 30px 20px;
@@ -12,7 +13,7 @@ const Body = styled(Box)`
   }
 `;
 const Header = styled(Box)`
-  width: 80%;
+  width: 320px;
   height: 100px;
   background-color: var(--color-primary);
   border: solid 3px var(--color-secondary);
@@ -28,13 +29,13 @@ const Header = styled(Box)`
   }
 `;
 
-function RankCard({ title, children }) {
+function RankCard({ title, children, className }) {
   return (
-    <VStack position="relative">
-      <Header>
+    <VStack position="relative" className={className}>
+      <Header className="rank-header">
         <Text>{title}</Text>
       </Header>
-      <Body>{children}</Body>
+      <Body className="rank-body">{children}</Body>
     </VStack>
   );
 }
