@@ -6,7 +6,6 @@ import Logo from "../components/Logo";
 function TotalPage() {
   return (
     <Flex
-      bg="#F8E6FB"
       w="full"
       h="full"
       paddingY="50px"
@@ -15,7 +14,7 @@ function TotalPage() {
       alignItems="center"
       justifyContent="center"
     >
-      <Logo color="#C476D1" flexOption=" 0 0 200px" />
+      <Logo color="var(--color-secondary)" flexOption=" 0 0 200px" />
       <SearchBar />
       <HStack w="100%" spacing="10%" justifyContent="center" marginTop="100px">
         <RankCard />

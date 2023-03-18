@@ -12,9 +12,6 @@ const PersonalBoardWrapper = styled.div`
   border: 1px solid black;
   border-radius: 50px;
   padding: 30px 20px;
-
-  --color-red: #dd5353;
-  --color-grey: #bababa;
 `;
 
 const Error = styled.div`
