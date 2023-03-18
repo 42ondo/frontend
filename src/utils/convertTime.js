@@ -1,11 +1,10 @@
-export function convertSecondsToTime(seconds) {
-  const hour = Math.floor(seconds / 3600);
-  const minute = Math.floor((seconds % 3600) / 60);
-  const second = seconds % 60;
-  return { hour, minute, second };
+export function convertSecondsToTime(minutes) {
+  const hour = Math.floor(minutes / 60);
+  const minute = Math.floor(minutes % 60);
+  return { hour, minute };
 }
 
-export function convertTimeString(seconds) {
-  const { hour, minute } = convertSecondsToTime(seconds);
+export function convertTimeString(minutes) {
+  const { hour, minute } = convertSecondsToTime(minutes);
   return `${hour}시간 ${minute}분`;
 }
