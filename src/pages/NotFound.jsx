@@ -1,5 +1,5 @@
 import RankCard from "../components/RankCard";
-import SearchBar from "../components/SearchBarTotal";
+import SearchBar from "../components/SearchBar";
 
 function NotFoundPage() {
   return (

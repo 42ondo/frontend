@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useApi } from "../hooks/useApi";
+import { Flex, Spinner } from "@chakra-ui/react";
 
 const Auth = () => {
   const [searchParams] = useSearchParams();
@@ -8,18 +9,35 @@ const Auth = () => {
   const { useGet } = useApi();
   const navigate = useNavigate();
 
-  const { status } = useGet(
+  useGet(
     "me",
     "auth/me",
     { code },
     {
       onSuccess: () => {
-        navigate("/total");
+        navigate("/total", { replace: true });
       },
     }
   );
 
-  return <div>{status}</div>;
+  return (
+    <Flex
+      width="full"
+      height="full"
+      justifyContent="center"
+      alignItems="center"
+      backgroundColor="#765da6"
+    >
+      <Spinner
+        thickness="4px"
+        speed="0.65s"
+        emptyColor="gray.200"
+        color="blue.500"
+        width="4vw"
+        height="4vw"
+      />
+    </Flex>
+  );
 };
 
 export default Auth;
