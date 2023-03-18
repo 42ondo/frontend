@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { userName } from "../../mockApi/userName";
+import { useGetUserName } from "../../apis/useGetUserName";
 
 const Header = styled.div`
   display: flex;
@@ -22,11 +22,12 @@ const Header = styled.div`
 `;
 
 const PersonalTitle = () => {
-  const { title, login } = userName();
+  const data = useGetUserName();
+
   return (
     <Header>
-      <span>{title}</span>
-      <span>{login?.toUpperCase()}</span>
+      <span>{data?.title}</span>
+      <span>{data?.login?.toUpperCase()}</span>
       <span>의 평가온도는?</span>
     </Header>
   );
