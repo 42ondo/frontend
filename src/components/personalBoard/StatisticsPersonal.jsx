@@ -29,7 +29,7 @@ const StatisticsPersonal = () => {
     <Wrapper>
       <Title>개 인</Title>
       <Text>
-        평가 횟수 {evalCnt}회 <b>상위 {(evalRatio * 100).toFixed(2)}%</b>
+        평가 횟수 {evalCnt}회 <b>상위 {evalRatio?.toFixed(2)}%</b>
       </Text>
       <Text>
         평가에 쏟은 시간 <b>총 {convertTimeString(timeSpentAll)}</b>
