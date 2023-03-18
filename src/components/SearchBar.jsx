@@ -9,7 +9,7 @@ const Form = styled.form`
   max-width: 800px;
 `;
 
-function SearchBar() {
+function SearchBar({ flexOption, className }) {
   const [query, setQuery] = useState("");
   const inputRef = useRef(null);
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ function SearchBar() {
   };
 
   return (
-    <Form onSubmit={handleSearch}>
+    <Form onSubmit={handleSearch} className={className}>
       <InputGroup w={"100%"}>
         <Input
           height={"50px"}
