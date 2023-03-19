@@ -6,7 +6,7 @@ import React from "react";
 const RankEvaluation = () => {
   const { evals } = useGetEvalRank();
   return (
-    <RankCard title="Evaluation RANK">
+    <>
       {evals?.map((evalData, index) => (
         <RankItem
           rankNum={index + 1}
@@ -15,7 +15,7 @@ const RankEvaluation = () => {
           countUnit="회"
         />
       ))}
-    </RankCard>
+    </>
   );
 };
 
