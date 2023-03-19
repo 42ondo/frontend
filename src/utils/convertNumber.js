@@ -11,3 +11,8 @@ export const formatNumberThousands = (number) => {
   }
   return number?.toLocaleString();
 };
+
+export const parseTemperature = (ondo) => {
+  const degree = parseInt(ondo) ?? 0;
+  return degree > 0 ? degree : 0;
+};

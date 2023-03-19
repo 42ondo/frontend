@@ -1,4 +1,5 @@
 import { useApi } from "hooks/useApi";
+import { parseTemperature } from "utils/convertNumber";
 
 const useGetOndoAverage = () => {
   const { useGet } = useApi();
@@ -6,7 +7,7 @@ const useGetOndoAverage = () => {
     onSuccess: (response) => response.data,
   });
 
-  return { degree: parseInt(data?.ondo) ?? 0 };
+  return { degree: parseTemperature(data?.ondo) };
 };
 
 export default useGetOndoAverage;
