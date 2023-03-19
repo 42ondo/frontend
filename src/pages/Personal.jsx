@@ -1,8 +1,8 @@
-import PersonalBoard from "../components/personal/PersonalBoard";
-import { Flex, HStack } from "@chakra-ui/react";
 import styled from "@emotion/styled";
+import { Flex, HStack } from "@chakra-ui/react";
 import Logo from "components/Logo";
 import SearchBar from "components/SearchBar";
+import PersonalBoard from "components/personal/PersonalBoard";
 import MostUsed from "components/personal/MostUsed";
 
 const LogoLeft = styled(Logo)`
@@ -24,6 +24,7 @@ const PersonalContents = styled(HStack)`
   }
   .rank-body {
     height: 100%;
+    box-sizing: border-box;
   }
 `;
 function PersonalPage() {

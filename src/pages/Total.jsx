@@ -1,9 +1,16 @@
+import styled from "@emotion/styled";
 import { Flex, HStack } from "@chakra-ui/react";
 import SearchBar from "components/SearchBar";
 import Logo from "components/Logo";
 import RankTemperature from "components/total/RankTemperature";
 import RankWord from "components/total/RankWord";
 import RankEvaluation from "components/total/RankEvaluation";
+
+const Ranks = styled(HStack)`
+  .spinner {
+    margin-top: 160px;
+  }
+`;
 
 function TotalPage() {
   return (
@@ -18,11 +25,11 @@ function TotalPage() {
     >
       <Logo color="var(--color-secondary)" flexOption=" 0 0 200px" />
       <SearchBar />
-      <HStack w="100%" spacing="10%" justifyContent="center" marginTop="100px">
+      <Ranks w="100%" spacing="10%" justifyContent="center" marginTop="100px">
         <RankTemperature />
         <RankWord />
         <RankEvaluation />
-      </HStack>
+      </Ranks>
     </Flex>
   );
 }
