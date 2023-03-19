@@ -5,5 +5,9 @@ export const roundNumber = (num, precision = 0) => {
 };
 
 export const formatNumberThousands = (number) => {
+  if (typeof number !== "number") {
+    let parsedNumber = parseInt(number, 10);
+    return isNaN(parsedNumber) ? number : parsedNumber?.toLocaleString();
+  }
   return number?.toLocaleString();
 };
