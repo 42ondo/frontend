@@ -6,11 +6,24 @@ import NotFoundPage from "pages/NotFound";
 import PersonalPage from "pages/Personal";
 import TotalPage from "pages/Total";
 import AuthPage from "pages/Auth";
+import { useToast } from "@chakra-ui/react";
 
 const AppRoutes = () => {
+  const toast = useToast();
+
+  const handleRouteError = (error) => {
+    toast({
+      title: "Error",
+      description: error.message,
+      status: "error",
+      duration: 5000,
+      isClosable: true,
+    });
+  };
+
   return (
     <BrowserRouter>
-      <Routes>
+      <Routes onError={handleRouteError}>
         <Route errorElement={<ErrorPage />}>
           {/* <Route
             path="/"
