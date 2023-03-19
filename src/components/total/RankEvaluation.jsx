@@ -14,6 +14,8 @@ const RankEvaluation = () => {
           rankText={evalData.userName}
           rankCount={formatNumberThousands(evalData.count)}
           countUnit="회"
+          isLink={true}
+          to={`/personal/${evalData.userName}`}
         />
       ))}
     </RankCard>
