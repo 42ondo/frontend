@@ -8,9 +8,9 @@ export const axiosInstance = axios.create({
 axiosInstance.interceptors.response.use(
   (response) => response,
   (error) => {
-    if (error.response && error.response.status === 403) {
-      // 403 에러 응답시 로그인 페이지로 리다이렉트
-      window.location.href = "/login";
+    if (error.response && error.response.status === 401) {
+      // 토큰 에러 응답시 로그인 페이지로 리다이렉트
+      window.location.href = "/";
     } else {
       return Promise.reject(error);
     }
