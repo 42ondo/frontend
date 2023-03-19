@@ -6,13 +6,14 @@ export const useGetUserName = () => {
   const { name } = useParams();
   const { useGet } = useApi();
 
-  const { data } = useGet("userName", `user/${name}`, undefined, {
+  const { data, isLoading } = useGet("userName", `user/${name}`, undefined, {
     onSuccess: (response) => response.data,
   });
 
   return {
     id: data?.id,
-    login: data?.login,
+    login: data?.login ?? name,
     ondo: parseTemperature(data?.ondo),
+    isLoading,
   };
 };

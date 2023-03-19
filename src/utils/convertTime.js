@@ -5,6 +5,8 @@ export function convertSecondsToTime(minutes) {
 }
 
 export function convertTimeString(minutes) {
-  const { hour, minute } = convertSecondsToTime(minutes);
+  let { hour, minute } = convertSecondsToTime(minutes);
+  if (isNaN(hour)) hour = "??";
+  if (isNaN(minute)) minute = "??";
   return `${hour}시간 ${minute}분`;
 }

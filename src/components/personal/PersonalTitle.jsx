@@ -14,12 +14,6 @@ const Header = styled.div`
   justify-content: center;
   font-size: 48px;
   margin-left: 10px;
-
-  @media screen and (max-width: 1400px) {
-    & {
-      flex-direction: column;
-    }
-  }
 `;
 
 const Title = styled.span`

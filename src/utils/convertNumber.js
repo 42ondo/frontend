@@ -1,6 +1,7 @@
 export const roundNumber = (num, precision = 0) => {
   const factor = Math.pow(10, precision);
   const rounded = Math.round(num * factor) / factor;
+  if (isNaN(rounded)) return "??";
   return rounded > 99.9 ? 99.9 : rounded?.toFixed(precision);
 };
 
