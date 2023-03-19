@@ -9,10 +9,10 @@ export const useGetEvalName = () => {
   });
 
   return {
-    evalCnt: data?.evalCnt,
-    timeSpentAll: data?.timeSpentAll,
-    timeZoneLike: data?.timeZoneLike,
-    mostSubject: data?.mostSubject,
-    evalRatio: data?.evalRatio,
+    evalCnt: data?.evalCnt ?? "??",
+    timeSpentAll: data?.timeSpentAll ?? "??",
+    timeZoneLike: data?.timeZoneLike ?? "??",
+    mostSubject: data?.mostSubject ?? "??",
+    evalRatio: data?.evalRatio ?? "??",
   };
 };

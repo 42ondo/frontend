@@ -1,9 +1,9 @@
-import React, { Suspense } from "react";
+import React from "react";
 import styled from "@emotion/styled";
 import { useGetUserName } from "apis/useGetUserName";
 import TemperatureBody from "assets/images/temperature_body.svg";
 import TemperatureFill from "components/TemperatureFill";
-const TemperatureAverage = React.lazy(() => import("./TemperatureAverage"));
+import TemperatureAverage from "components/personal/TemperatureAverage";
 
 const Wrapper = styled.div`
   position: relative;
@@ -23,9 +23,7 @@ const Temperature = () => {
   return (
     <Wrapper>
       <Fill degree={degree} text="현재" />
-      {/* <Suspense> */}
       <TemperatureAverage text="평균" />
-      {/* </Suspense> */}
     </Wrapper>
   );
 };
