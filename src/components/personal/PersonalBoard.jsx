@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { useGetUserName } from "apis/useGetUserName";
 import PersonalTitle from "components/personal/PersonalTitle";
-import Temperature from "components/Temperature";
+import Temperature from "components/personal/Temperature";
 import Statistics from "components/personal/Statistics";
 
 const PersonalBoardWrapper = styled.div`

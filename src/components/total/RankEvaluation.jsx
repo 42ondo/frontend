@@ -2,6 +2,7 @@ import { useGetEvalRank } from "apis/useGetEvalRank";
 import RankCard from "components/RankCard";
 import RankItem from "components/RankItem";
 import React from "react";
+import { formatNumberThousands } from "utils/convertNumber";
 
 const RankEvaluation = () => {
   const { evals } = useGetEvalRank();
@@ -11,8 +12,10 @@ const RankEvaluation = () => {
         <RankItem
           rankNum={index + 1}
           rankText={evalData.userName}
-          rankCount={evalData.count}
+          rankCount={formatNumberThousands(evalData.count)}
           countUnit="회"
+          isLink={true}
+          to={`/personal/${evalData.userName}`}
         />
       ))}
     </RankCard>

@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useApi } from "hooks/useApi";
+import { parseTemperature } from "utils/convertNumber";
 
 export const useGetUserName = () => {
   const { name } = useParams();
@@ -12,6 +13,6 @@ export const useGetUserName = () => {
   return {
     id: data?.id,
     login: data?.login,
-    ondo: data?.ondo,
+    ondo: parseTemperature(data?.ondo),
   };
 };

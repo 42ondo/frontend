@@ -3,7 +3,11 @@ import React from "react";
 import { useGetEvalName } from "apis/useGetEvalName";
 import { timeToString } from "utils/timeToString";
 import { convertTimeString } from "utils/convertTime";
-import { StatisticsText, StatisticsTitle } from "components/personal/StatisticsStyle";
+import {
+  StatisticsText,
+  StatisticsTitle,
+} from "components/personal/StatisticsStyle";
+import { roundNumber } from "utils/convertNumber";
 
 const Wrapper = styled.div`
   width: 500px;
@@ -29,7 +33,7 @@ const StatisticsPersonal = () => {
     <Wrapper>
       <Title>개 인</Title>
       <Text>
-        평가 횟수 {evalCnt}회 <b>상위 {evalRatio?.toFixed(2)}%</b>
+        평가 횟수 {evalCnt}회 <b>상위 {roundNumber(evalRatio, 2)}%</b>
       </Text>
       <Text>
         평가에 쏟은 시간 <b>총 {convertTimeString(timeSpentAll)}</b>

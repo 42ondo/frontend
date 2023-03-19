@@ -3,7 +3,11 @@ import styled from "@emotion/styled";
 import { useGetEvalAverage } from "apis/useGetEvalAverage";
 import { timeToString } from "utils/timeToString";
 import { convertTimeString } from "utils/convertTime";
-import { StatisticsText, StatisticsTitle } from "components/personal/StatisticsStyle";
+import {
+  StatisticsText,
+  StatisticsTitle,
+} from "components/personal/StatisticsStyle";
+import { formatNumberThousands } from "utils/convertNumber";
 
 const Wrapper = styled.div`
   width: 150px;
@@ -23,7 +27,7 @@ const StatisticsAverage = () => {
   return (
     <Wrapper>
       <Title>전 체</Title>
-      <Text>{evalCnt?.toLocaleString()}회</Text>
+      <Text>{formatNumberThousands(evalCnt)}회</Text>
       <Text>{convertTimeString(timeSpentAll)}</Text>
       <Text>{timeToString(timeZoneLike)}</Text>
       <Text>{mostSubject}</Text>

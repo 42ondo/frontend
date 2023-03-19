@@ -1,7 +1,8 @@
+import React from "react";
 import { useGetOndoRank } from "apis/useGetOndoRank";
 import RankCard from "components/RankCard";
 import RankItem from "components/RankItem";
-import React from "react";
+import { roundNumber } from "utils/convertNumber";
 
 const RankTemperature = () => {
   const { users } = useGetOndoRank();
@@ -14,8 +15,8 @@ const RankTemperature = () => {
         <RankItem
           rankNum={index + 1}
           rankText={user.name}
-          rankCount={user.ondo}
-          countUnit="도"
+          rankCount={roundNumber(user.ondo, 2)}
+          countUnit="°C"
           isLink={true}
           to={`/personal/${user.name}`}
         />
