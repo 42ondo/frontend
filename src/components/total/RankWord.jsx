@@ -6,7 +6,10 @@ import React from "react";
 const RankWord = () => {
   const { words } = useGetWordRank();
   return (
-    <RankCard title="Word RANK">
+    <RankCard
+      title="Word RANK"
+      label="평가 로그에서 많이 사용된 단어 랭킹 입니다"
+    >
       {words?.map((word, index) => (
         <RankItem
           rankNum={index + 1}
