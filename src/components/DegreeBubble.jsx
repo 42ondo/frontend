@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 
   background-repeat: no-repeat;
   background-size: 120px;
-  padding: 15px;
+  padding: 20px 12px;
   color: var(--color-red);
 `;
 
@@ -20,8 +20,9 @@ const Text = styled.p`
 `;
 
 const Degree = styled.p`
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bold;
+  letter-spacing: 0.1px;
 `;
 
 const DegreeBubble = ({ className, text, degree }) => {
