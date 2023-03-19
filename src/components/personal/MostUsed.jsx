@@ -3,6 +3,7 @@ import RankCard from "components/RankCard";
 import RankItem from "components/RankItem";
 import { useGetWordRankName } from "apis/useGetWordRankName";
 import styled from "@emotion/styled";
+import { formatNumberThousands } from "utils/convertNumber";
 
 const Wrapper = styled(RankCard)``;
 
@@ -15,7 +16,7 @@ const MostUsed = () => {
           key={word.word}
           rankNum={index + 1}
           rankText={word.word}
-          rankCount={word.count}
+          rankCount={formatNumberThousands(word.count)}
           countUnit="회"
         />
       ))}

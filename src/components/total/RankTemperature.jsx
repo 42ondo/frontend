@@ -13,7 +13,7 @@ const RankTemperature = () => {
           rankNum={index + 1}
           rankText={user.name}
           rankCount={roundNumber(user.ondo, 2)}
-          countUnit="도"
+          countUnit="°C"
           isLink={true}
           to={`/personal/${user.name}`}
         />
