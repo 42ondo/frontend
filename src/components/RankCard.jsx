@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { VStack, Text, Box } from "@chakra-ui/react";
+import CustomTooltip from "./personal/CustomTooltip";
 
 const Body = styled(Box)`
   width: 380px;
@@ -31,11 +32,13 @@ const Header = styled(Box)`
   }
 `;
 
-function RankCard({ title, children, className }) {
+function RankCard({ title, children, className, label }) {
   return (
     <VStack position="relative" className={className}>
       <Header className="rank-header">
-        <Text>{title}</Text>
+        <CustomTooltip label={label}>
+          <Text>{title}</Text>
+        </CustomTooltip>
       </Header>
       <Body className="rank-body">{children}</Body>
     </VStack>

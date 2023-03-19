@@ -9,7 +9,11 @@ const Wrapper = styled(RankCard)``;
 const MostUsed = () => {
   const { words } = useGetWordRankName();
   return (
-    <Wrapper title="most used" className="most-used">
+    <Wrapper
+      title="most used"
+      className="most-used"
+      label="평가에서 가장 많이 사용하신 단어 랭킹입니다"
+    >
       {words?.map((word, index) => (
         <RankItem
           key={word.word}
