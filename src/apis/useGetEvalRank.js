@@ -2,7 +2,7 @@ import { useApi } from "hooks/useApi";
 
 export const useGetEvalRank = () => {
   const { useGet } = useApi();
-  const { data } = useGet(
+  const { data, isLoading } = useGet(
     "eval/rank",
     "eval/rank",
     { count: 5 },
@@ -10,5 +10,5 @@ export const useGetEvalRank = () => {
       onSuccess: (response) => response.data,
     }
   );
-  return { evals: data?.evals };
+  return { evals: data?.evals, isLoading };
 };

@@ -7,7 +7,7 @@ const Body = styled(Box)`
   min-height: 530px;
   background-color: white;
   min-width: 360px;
-  padding: 40px 30px 20px;
+  padding: 40px 30px 10px;
   border-radius: 80px;
   border: solid 15px var(--color-secondary);
   & > :first-child {
@@ -45,12 +45,3 @@ function RankCard({ title, children, className, label }) {
   );
 }
 export default RankCard;
-
-/*
-type user = {
- id: number,
- name : string,
- imgUrl : string,
- ondo : number
-}
-*/

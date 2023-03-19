@@ -10,7 +10,7 @@ const Rank = styled.div`
 
   & > .rank-num {
     font-size: 32px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
   & > .rank-num-unit {
     margin-right: 20px;
