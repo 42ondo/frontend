@@ -4,14 +4,14 @@ import RankItem from "components/RankItem";
 import React from "react";
 
 const RankEvaluation = () => {
-  const { words } = useGetEvalRank();
+  const { evals } = useGetEvalRank();
   return (
     <RankCard title="Evaluation RANK">
-      {words?.map((word, index) => (
+      {evals?.map((evalData, index) => (
         <RankItem
           rankNum={index + 1}
-          rankText={word.word}
-          rankCount={word.count}
+          rankText={evalData.userName}
+          rankCount={evalData.count}
           countUnit="회"
         />
       ))}
