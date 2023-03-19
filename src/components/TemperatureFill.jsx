@@ -4,7 +4,7 @@ import DegreeBubble from "components/DegreeBubble";
 import { roundNumber } from "utils/convertNumber";
 
 const Filled = styled.div`
-  width: ${(props) => props.degree * 8}px;
+  width: ${(props) => props.degree * 6.1}px;
   height: 48px;
   background-color: var(--color-red);
   opacity: 0.8;
@@ -18,7 +18,7 @@ const Bubble = styled(DegreeBubble)`
   color: var(--color-red);
   position: absolute;
   top: -120px;
-  left: ${(props) => props.degree * 8 - 28}px;
+  left: ${(props) => props.degree * 6.1 - 28}px;
 `;
 const Wrapper = styled.div``;
 

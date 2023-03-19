@@ -16,7 +16,7 @@ const AverageFill = styled(TemperatureFill)`
     top: 60px;
     background-image: url(${BubbleReverse});
     padding-top: 50px;
-    left: ${(props) => props.degree * 8 - 70}px;
+    left: ${(props) => props.degree * 6.1 - 70}px;
     color: var(--color-grey);
   }
 `;
