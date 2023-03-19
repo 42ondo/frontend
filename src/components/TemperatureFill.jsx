@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
 import DegreeBubble from "components/DegreeBubble";
+import { roundNumber } from "utils/convertNumber";
 
 const Filled = styled.div`
   width: ${(props) => props.degree * 8}px;
@@ -22,15 +23,16 @@ const Bubble = styled(DegreeBubble)`
 const Wrapper = styled.div``;
 
 const TemperatureFill = ({ className, degree, text }) => {
-  const rouned = (number) => {
-    console.log(number, typeof number);
-    if (typeof number === "number") return parseInt(number, 10);
-    return number;
-  };
+  const roundedDegree = roundNumber(degree, 1);
   return (
     <Wrapper className={className}>
-      <Filled degree={rouned(degree)} className="fill" />
-      <Bubble id="bubble" text={text} degree={degree} className="bubble" />
+      <Filled degree={roundedDegree} className="fill" />
+      <Bubble
+        id="bubble"
+        text={text}
+        degree={roundedDegree}
+        className="bubble"
+      />
     </Wrapper>
   );
 };
