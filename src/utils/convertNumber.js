@@ -13,6 +13,5 @@ export const formatNumberThousands = (number) => {
 };
 
 export const parseTemperature = (ondo) => {
-  const degree = parseInt(ondo) ?? 0;
-  return degree > 0 ? degree : 0;
+  return ondo > 0 ? ondo : 0;
 };
