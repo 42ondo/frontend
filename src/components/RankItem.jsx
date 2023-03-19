@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Box, HStack } from "@chakra-ui/react";
+import ConditionalLink from "components/ConditionalLink";
 
 const Rank = styled.div`
   display: flex;
@@ -19,31 +20,22 @@ const Rank = styled.div`
   }
 `;
 
-function RankItem({ rankText, rankNum, rankCount, countUnit, imgUrl }) {
+function RankItem({ rankText, rankNum, rankCount, countUnit, isLink, to }) {
   return (
-    <Box marginY="20px" fontWeight="bold" fontSize="20px">
-      <HStack justifyContent="space-between">
-        <Rank>
-          <span className="rank-num" size="32px">
-            {rankNum}
-          </span>
-          <span className="rank-num-unit">위</span>
-          <span className="rank-text">{rankText}</span>
-          <span>{`(${rankCount} ${countUnit})`}</span>
-        </Rank>
-        {imgUrl ? (
-          <Box
-            w="25px"
-            h="25px"
-            borderRadius="50%"
-            bg={"gray"}
-            backgroundImage={`url(${imgUrl})`}
-            backgroundSize="cover"
-            backgroundPosition="center"
-          />
-        ) : null}
-      </HStack>
-    </Box>
+    <ConditionalLink isLink={isLink} to={to}>
+      <Box marginY="40px" fontWeight="bold" fontSize="20px">
+        <HStack justifyContent="space-between">
+          <Rank>
+            <span className="rank-num" size="32px">
+              {rankNum}
+            </span>
+            <span className="rank-num-unit">위</span>
+            <span className="rank-text">{rankText}</span>
+            <span>{`(${rankCount} ${countUnit})`}</span>
+          </Rank>
+        </HStack>
+      </Box>
+    </ConditionalLink>
   );
 }
 export default RankItem;

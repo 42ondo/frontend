@@ -12,9 +12,9 @@ const MostUsed = () => {
     <Wrapper title="most used" className="most-used">
       {words?.map((word, index) => (
         <RankItem
-          key={word.string}
+          key={word.word}
           rankNum={index + 1}
-          rankText={word.string}
+          rankText={word.word}
           rankCount={word.count}
           countUnit="회"
         />

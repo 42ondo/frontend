@@ -2,9 +2,9 @@ import { useParams } from "react-router-dom";
 import { useApi } from "hooks/useApi";
 
 export const useGetEvalName = () => {
-  const { userName } = useParams();
+  const { name } = useParams();
   const { useGet } = useApi();
-  const { data } = useGet("evalName", `eval/${userName}`, undefined, {
+  const { data } = useGet("evalName", `eval/${name}`, undefined, {
     onSuccess: (response) => response.data,
   });
 

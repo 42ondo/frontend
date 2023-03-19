@@ -3,6 +3,7 @@ import { VStack, Text, Box } from "@chakra-ui/react";
 
 const Body = styled(Box)`
   width: 380px;
+  min-height: 530px;
   background-color: white;
   min-width: 360px;
   padding: 40px 30px 20px;
