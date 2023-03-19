@@ -6,7 +6,10 @@ import React from "react";
 const RankEvaluation = () => {
   const { evals } = useGetEvalRank();
   return (
-    <RankCard title="Evaluation RANK" label="전체 유저의 평가 횟수 랭킹입니다">
+    <RankCard
+      title="Evaluation RANK"
+      label="전체 유저의 이번주 평가 횟수 랭킹입니다"
+    >
       {evals?.map((evalData, index) => (
         <RankItem
           rankNum={index + 1}
