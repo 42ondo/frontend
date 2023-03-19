@@ -17,6 +17,9 @@ const Rank = styled.div`
   }
   & > .rank-text {
     flex: 1 0 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 `;
 
