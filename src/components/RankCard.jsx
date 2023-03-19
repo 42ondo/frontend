@@ -23,6 +23,7 @@ const Header = styled(Box)`
   font-family: "Bungee";
   font-size: 36px;
   display: flex;
+  text-align: center;
   position: absolute;
   top: -40px;
   & > p {
