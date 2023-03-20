@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# 42 ONDO
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## 우리사이… 몇도야?
+당신의 온도를 확인하세요!
 
-In the project directory, you can run:
+— 42 ONDO 
 
-### `npm start`
+> sujikim, cmoon, Juahn, dongyshi
+> 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 1. 개요
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+이 프로젝트는 평가 로그 기반의 통계 자료를 이용하여 유저들의 평가 동향을 파악하고, 평가 능력 향상 및 평가 태도 반성에 기여하는 웹 서비스입니다.
 
-### `npm test`
+![Group 71.png](https://raw.githubusercontent.com/42ondo/documents/main/42ONDO/Group_71.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **2. 목표**
 
-### `npm run build`
+이 프로젝트의 목표는 42 커뮤니티의 평가 문화를 발전시키는 것입니다. 이를 위해 유저들의 평가 동향을 분석하여 평가 능력 향상에 도움을 주는 것이 주요 목적입니다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## **3. 기능**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+이 웹 서비스는 다음과 같은 기능을 제공합니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 42API에서 유저들의 평가 기록을 불러와서 통계 처리합니다.
+- 유저들은 자신의 평가 횟수, 평가에 투자한 시간, 자주 평가한 시간대 및 서브젝트에 대한 개인별 및 전체 기준의 데이터를 확인할 수 있습니다.
+- 모든 지표를 종합하여 42온도라는 종합 지수를 계산하고, 이를 온도계 형태로 시각화하여 유저들이 자신의 평가 능력을 한 눈에 파악할 수 있도록 합니다.
+    
+    ![Group 74-2.png](https://raw.githubusercontent.com/42ondo/documents/main/42ONDO/Group_74-2.png)
+    
 
-### `npm run eject`
+## **4. 기술 스택**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+이 웹 서비스는 다음과 같은 기술 스택을 사용합니다.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- 프론트엔드: React
+- 백엔드: NestJS
+- 데이터베이스: PostgreSQL
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## **5. 발상**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+이 프로젝트는 42 커뮤니티의 평가 문화를 발전시키기 위한 아이디어에서 출발하였습니다. 평가를 하면서 자신의 능력을 발전시키기 위해서는 자신의 평가 동향을 파악해야 하지만, 이를 분석하기에는 시간과 노력이 많이 필요합니다. 따라서, 이러한 작업을 자동화하여 유저들이 자신의 평가 동향을 쉽게 파악할 수 있도록 하는 것이 이 프로젝트의 발상이었습니다.
 
-## Learn More
+![Group 69.png](https://raw.githubusercontent.com/42ondo/documents/main/42ONDO/Group_69.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## **6. 효과**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 개인별 및 전체적인 평가 동향을 시각적으로 확인할 수 있기 때문에, 학습에 대한 목표 설정 및 성취도 파악이 가능합니다.
+- 시각화된 지표를 도입하여 평가에 대한 흥미를 유발하고 이를 통해 양질의 평가가 다수 이루어질 수 있도록 유도합니다.
+- 유저들은 서로의 평가 동향을 비교하면서 서로의 능력 수준을 인식하고, 동기부여를 얻을 수 있습니다.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Group 68.png](https://raw.githubusercontent.com/42ondo/documents/main/42ONDO/Group_68.png)
